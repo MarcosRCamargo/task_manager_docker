@@ -23,7 +23,8 @@ class TaskFatory extends Factory
             'end_estimate_date' => fake()->dateTimeThisMonth('+15 days'),
             'end_date' => null,
             'status' => 1,
-            'delegated_user' => 1,
+            'owner' => 1,
+            'delegated_user' => 2,
         ];
     }
 
