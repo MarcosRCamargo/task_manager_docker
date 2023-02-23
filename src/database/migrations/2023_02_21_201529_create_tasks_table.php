@@ -18,8 +18,11 @@ return new class extends Migration
             $table->string('title')->unique();
             $table->text('description');
             $table->timestamp('start_date');
-            $table->timestamp('end_estimate_date')->nullable();
+            $table->timestamp('end_estimate_date');
+            $table->timestamp('end_date')->nullable();
             $table->integer('status')->default(null);
+            $table->integer('owner');
+            $table->integer('delegated_user');
             $table->timestamps();
         });
     }
